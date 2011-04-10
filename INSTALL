@@ -1,0 +1,8 @@
+to Compile, just type
+
+./make
+
+If you want to compile with a pre "--make" version of GHC (to my
+knoweledge, this is anything less than 5), you will need to write
+your own makefile. 
+

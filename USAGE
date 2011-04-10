@@ -1,0 +1,36 @@
+to play, just type 
+
+./ofk.exe
+
+The defaulte mode is for the human to move first, then the computer
+will think three moves ahead and make it's move. The cycle will
+continue until a winner prevails. 
+
+You can set differnt play modes with
+
+./ofk.exe players=<player 1 options>:<player 2 options>
+
+Player options are as follows:
+
+h  =  human player
+w  =  prompt for move as webpage and stop execution (only usefull for CGI)
+cX =  computer move where X is the number of moves to look ahead
+
+
+Other options are as follows:
+
+move=<move in Thomas Hallock's OCTI for Kits notation>
+board=<board expressed as Haskell tuples and lists see Ofk.hs for info>
+-cgi=<regular arguments list escaped as UCF-8 characters>
+
+
+The bot may be set up quite easily to run as a CGI application. Just
+place the files "ofk.exe" and "fcgi" into a cgi-bin folder and type: 
+
+chmod 0755 fcgi
+chown nobody fcgi
+
+To play the game through a web browser, just access the URL: 
+
+http://path-to-ofk-online-folder/fcgi?players=c3%3Aw
+
