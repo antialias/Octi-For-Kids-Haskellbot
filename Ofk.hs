@@ -2,7 +2,7 @@
 module Ofk where
 
 import Minimax
-import List
+import Data.List
 import Thtools
 
 type Ofkboard = (Integer,((Int,Int),[(Int,(Int,Int),[Int])]))
@@ -227,10 +227,10 @@ ofkboardstr (curplayer,((p1,p2),bo)) =
 
 
 
-ofkevalfloat :: (Num a, Integral b, Num c) => (d,((b,b),[(b,(a,b),[b])])) -> c
+ofkevalfloat :: (Eq a, Num a, Integral b, Num c) => (d,((b,b),[(b,(a,b),[b])])) -> c
 ofkevalfloat = fromInteger.ofkeval
 
-ofkeval :: (Integral a, Num b) => (c,((a,a),[(a,(b,a),[a])])) -> Integer
+ofkeval :: (Eq a, Integral a, Num b, Eq b) => (c,((a,a),[(a,(b,a),[a])])) -> Integer
 
 ofkeval (_,(pc,b))
 	| not (null gmax) = win

@@ -1,6 +1,6 @@
 module Thtools where
 
-import List
+import Data.List
 
 sign 0 = 0
 sign n

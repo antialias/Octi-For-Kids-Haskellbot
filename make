@@ -1,6 +1,6 @@
 echo "Compiling Octi for kids"
 
-ghc --make -O Main.hs -o ofk.exe -O -fvia-C -O2-for-C
+ghc --make -O Main.hs -o ofk.exe -O 
 
 #rm *.o *.hi;
 #/usr/local/ghc/bin/ghc -c -O thtools.hs;

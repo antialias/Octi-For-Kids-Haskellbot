@@ -1,7 +1,7 @@
 module Minimax where
 
 import Tree
-import List
+import Data.List
 import Thtools
 
 inf = 999

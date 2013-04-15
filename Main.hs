@@ -3,7 +3,7 @@ module Main where
 import Game
 import Minimax
 import Thtools
-import System
+import System.Environment
 import CGI
 import Ofk
 
